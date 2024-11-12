@@ -1,20 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AppUI } from "./AppUI";
 import { useLocalStorage } from "./useLocalStorage";
 
+// localStorage.removeItem('TODOS_V1');
+
 // const defaultTodos = [
-//   { text: 'Cortar cebolla', completed: true },
-//   { text: 'Tomar el Curso de Intro a React.js', completed: false },
-//   { text: 'Llorar con la Llorona', completed: false },
-//   { text: 'LALALALALA', completed: false },
-//   { text: 'Usar estados derivados', completed: true },
+// 	{ text: "Cortar cebolla", completed: true },
+// 	{ text: "Tomar el Curso de Intro a React.js", completed: false },
+// 	{ text: "Llorar con la Llorona", completed: false },
+// 	{ text: "LALALALALA", completed: false },
+// 	{ text: "Usar estados derivados", completed: true },
 // ];
 
 // localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
-// localStorage.removeItem('TODOS_V1');
 
 function App() {
-	const [todos, saveTodos] = useLocalStorage("TODOS_V1", []);
+	const {
+		item: todos,
+		saveItem: saveTodos,
+		loading,
+		error,
+	} = useLocalStorage("TODOS_V1", []);
 	const [searchValue, setSearchValue] = React.useState("");
 
 	const completedTodos = todos.filter((todo) => !!todo.completed).length;
@@ -25,6 +31,12 @@ function App() {
 		const searchText = searchValue.toLowerCase();
 		return todoText.includes(searchText);
 	});
+
+	// console.log("log 1");
+	// useEffect(() => {
+	// 	console.log("log 2");
+	// }, [totalTodos]);
+	// console.log("log 3");
 
 	const completeTodo = (text) => {
 		const newTodos = [...todos];
@@ -42,6 +54,8 @@ function App() {
 
 	return (
 		<AppUI
+			loading={loading}
+			error={error}
 			completedTodos={completedTodos}
 			totalTodos={totalTodos}
 			searchValue={searchValue}

@@ -1,10 +1,9 @@
-import CheckSVG from "./check.svg";
-import DeleteSVG from "./delete.svg";
+import { FaCheck, FaXmark } from "react-icons/fa6";
 import "./TodoIcon.css";
 
 const iconTypes = {
-	check: (color) => <CheckSVG className="Icon-svg" fill={color} />,
-	delete: (color) => <DeleteSVG className="Icon-svg" fill={color} />,
+	check: (color) => <FaCheck className="Icon-svg" fill={color} />,
+	delete: (color) => <FaXmark className="Icon-svg" fill={color} />,
 };
 
 function TodoIcon({ type, color, onClick }) {
