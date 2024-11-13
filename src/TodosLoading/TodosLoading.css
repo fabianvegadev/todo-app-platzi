@@ -1,0 +1,10 @@
+.Loading-container {
+	position: absolute;
+	width: 60px;
+	right: calc(50% - 30px);
+	top: 40%;
+}
+
+.Loading-icon {
+	width: 100%;
+}
