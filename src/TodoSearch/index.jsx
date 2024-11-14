@@ -6,7 +6,7 @@ function TodoSearch() {
 	const context = useContext(TodoContext);
 	return (
 		<input
-			placeholder="Cortar cebolla"
+			placeholder="Buscar..."
 			className="TodoSearch"
 			value={context.searchValue}
 			onChange={(event) => {

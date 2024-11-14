@@ -1,0 +1,7 @@
+.EmptyTodos-message {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	bottom: 40px;
+	right: 100px;
+}

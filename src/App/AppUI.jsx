@@ -8,6 +8,8 @@ import { TodosLoading } from "../TodosLoading";
 import { TodosError } from "../TodosError";
 import { EmptyTodos } from "../EmptyTodos";
 import { CreateTodoButton } from "../CreateTodoButton";
+import { Modal } from "../Modal";
+import { TodoForm } from "../TodoForm";
 
 function AppUI() {
 	const context = useContext(TodoContext);
@@ -35,6 +37,12 @@ function AppUI() {
 			</TodoList>
 
 			<CreateTodoButton />
+
+			{context.openModal && (
+				<Modal>
+					<TodoForm />
+				</Modal>
+			)}
 		</>
 	);
 }

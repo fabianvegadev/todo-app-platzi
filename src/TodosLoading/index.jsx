@@ -1,10 +1,10 @@
-import loading from "./loading.svg";
+import { LoadingIcon } from "./LoadingIcon";
 import "./TodosLoading.css";
 
 const TodosLoading = () => {
 	return (
 		<figure className="Loading-container">
-			<img src={loading} className="Loading-icon" />
+			<LoadingIcon size={60} />
 		</figure>
 	);
 };
