@@ -28,8 +28,6 @@ Puedes acceder a la demo de la aplicación aquí: [Todo App en GitHub Pages](htt
 - **GitHub Pages:** Utilizado para desplegar la aplicación y permitir el acceso en línea.
 
 ---
-
-   Desarrollado con 💻 y ☕ por [Fabian Velasquez](https://github.com/fabianvegadev)
+<p align="center">Desarrollado con 💻 y ☕ por <a href="https://github.com/fabianvegadev">Fabian Velasquez</a></p>
 
 ---
-
