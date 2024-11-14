@@ -1,6 +1,7 @@
 # Todo App 📝
 
-![Todo App Screenshot](./assets/screenshot1.png)(./assets/screenshot2.png)
+![Captura 1](./assets/screenshot1.png){width="200"}
+![Captura 2](./assets/screenshot2.png){width="200"}
 
 **Todo App** es una aplicación sencilla de lista de tareas desarrollada en React.js que permite agregar, marcar como completadas y eliminar tareas. Este proyecto fue realizado como parte del [Curso de React.js](https://platzi.com/cursos/react/) en Platzi, y despliega la aplicación a través de GitHub Pages.
 
